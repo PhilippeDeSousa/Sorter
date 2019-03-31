@@ -18,7 +18,6 @@ def sort(numbers):
 
     t1 = time.time()
     print('----------------------------------------------------------')
-    print('Selection sort:', count, 'swaps for', len(numbers), 'numbers')
+    print('Selection sort:', count, 'comparisons for', len(numbers), 'numbers')
     print('Time elapsed:', t1 - t0)
-    print(numbers)
     print('----------------------------------------------------------')

@@ -7,27 +7,35 @@ import merge
 import quick
 import selection
 import argparse
+import sys
 
 def main():
-    CLI = argparse.ArgumentParser()
-    CLI.add_argument(
-        "numbers",
-        nargs='*',
-        type=float,
-        default=None,
-    )
-    args = CLI.parse_args()
-    
+    numbers = []
+    if (len(sys.argv) == 1):
+        for line in sys.stdin:
+            line = line.strip('\n')
+            numbers = line.split(' ')
+            numbers = [float(i) for i in numbers]
+    else:
+        CLI = argparse.ArgumentParser()
+        CLI.add_argument(
+            "numbers",
+            nargs='*',
+            type=float,
+            default=None,
+        )
+        args = CLI.parse_args()
+        numbers = args.numbers
     print('Loading numbers...')
-    bubble.sort(args.numbers.copy())
+    bubble.sort(numbers.copy())
     print('\nLoading numbers...')
-    merge.sort(args.numbers.copy())
+    merge.sort(numbers.copy())
     print('\nLoading numbers...')
-    insertion.sort(args.numbers.copy())
+    insertion.sort(numbers.copy())
     print('\nLoading numbers...')
-    quick.sort(args.numbers.copy())
+    quick.sort(numbers.copy())
     print('\nLoading numbers...')
-    selection.sort(args.numbers.copy())
+    selection.sort(numbers.copy())
     
 if __name__ == "__main__":
     main()

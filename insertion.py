@@ -38,7 +38,6 @@ def sort(nbs):
 
     t1 = time.time()
     print('----------------------------------------------------------')
-    print('Insertion sort:', count, 'swaps for', len(numbers), 'numbers')
+    print('Insertion sort:', count, 'comparisons for', len(numbers), 'numbers')
     print('Time elapsed:', t1 - t0)
-    print(list(numbers))
     print('----------------------------------------------------------')
