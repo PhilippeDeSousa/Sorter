@@ -13,8 +13,9 @@ def sort(numbers):
         for l in range(i + 1, len(numbers)):
             if numbers[l] < numbers[min_idx]:
                 min_idx = l
+                count += 1
         swap(numbers, i, min_idx)
-        count += 1
+    
 
     t1 = time.time()
     print('----------------------------------------------------------')
