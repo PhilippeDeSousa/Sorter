@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 import bubble
@@ -26,6 +25,7 @@ def main():
         )
         args = CLI.parse_args()
         numbers = args.numbers
+    """
     print('Loading numbers...')
     bubble.sort(numbers.copy())
     print('\nLoading numbers...')
@@ -33,9 +33,12 @@ def main():
     print('\nLoading numbers...')
     insertion.sort(numbers.copy())
     print('\nLoading numbers...')
+    """
     quick.sort(numbers.copy())
+    """
     print('\nLoading numbers...')
     selection.sort(numbers.copy())
+    """
     
 if __name__ == "__main__":
     main()

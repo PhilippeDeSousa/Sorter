@@ -6,6 +6,7 @@ def swap(nbs, n1, n2):
     nbs[n2] = tmp
 
 def recurSort(numbers, count):
+    print('numbers:', numbers)
     if (len(numbers) > 1):
         pivot_idx = 0
         pivot = numbers[0]
@@ -18,6 +19,7 @@ def recurSort(numbers, count):
         swap(numbers, 0, pivot_idx)
         fp, count = recurSort(numbers[:pivot_idx], count)
         sp, count = recurSort(numbers[pivot_idx + 1:], count)
+        print('fp: ', fp, ' sp: ', sp)
         fp.append(numbers[pivot_idx])
 
         return fp + sp, count
